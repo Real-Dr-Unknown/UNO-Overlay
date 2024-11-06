@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknown UNO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="imgmain" id="imgBackH">
+            <img class="logo" id="hImage"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1920px-Flag_of_Canada_%28Pantone%29.svg.png">
+        </div>
+        <div class="home_name" id="hhN">UNK</div>
+        <div class="score" id="scS">0 - 0</div>
+        <div class="away_name" id="aaN">UNK</div>
+        <div class="imgmain" id="imgBackA">
+            <img class="logo" id="aImage"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1280px-Flag_of_Russia.svg.png">
+        </div>
+        <div class="timer" id="timerDisplay">00:00</div>
+        <div class="extra_time" id="exxt">+7</div>
+    </div>
+    <div class="nicha">
+        <div class="timDiv">
+            <div class="tminn">
+                <label for="timMin" class="jLab">Minutes</label>
+                <input type="number" class="minSec" id="timMin">
+            </div>
+            <div class="timsecc">
+                <label for="timSec" class="jLab">Seconds</label>
+                <input type="number" class="minSec" id="timSec">
+            </div>
+        </div>
+        <div class="NDiv">
+            <div class="ht">
+                <label for="hName" class="jLab">Home</label>
+                <input type="text" id="hName" class="namer">
+            </div>
+            <div class="at">
+                <label for="aName" class="jLab">Away</label>
+                <input type="text" id="aName" class="namer">
+            </div>
+        </div>
+        <div class="NDiv">
+            <div class="ht">
+                <label for="hColor" class="jLab">Home Color</label>
+                <input type="text" id="hColor" class="Colorr">
+            </div>
+            <div class="at">
+                <label for="aColor" class="jLab">Away Color</label>
+                <input type="text" id="aColor" class="Colorr">
+            </div>
+        </div>
+        <div class="NDiv">
+            <div class="ht">
+                <label for="hTColor" class="jLab">Home Text Color</label>
+                <input type="text" id="hTColor" class="Colorr">
+            </div>
+            <div class="at">
+                <label for="aTColor" class="jLab">Away Text Color</label>
+                <input type="text" id="aTColor" class="Colorr">
+            </div>
+        </div>
+        <div class="NDiv">
+            <div class="ht">
+                <label for="sTColor" class="jLab">Score Text Color</label>
+                <input type="text" id="sTColor" class="Colorr">
+            </div>
+            <div class="at">
+                <label for="sBColor" class="jLab">Score Background Color</label>
+                <input type="text" id="sBColor" class="Colorr">
+            </div>
+        </div>
+        <div class="NDiv">
+            <div class="ht">
+                <label for="tTColor" class="jLab">Timer Text Color</label>
+                <input type="text" id="tTColor" class="Colorr">
+            </div>
+            <div class="at">
+                <label for="tBColor" class="jLab">Timer Background Color</label>
+                <input type="text" id="tBColor" class="Colorr">
+            </div>
+        </div>
+        <div class="NDiv">
+            <div class="ht">
+                <label for="hLogo" class="jLab">Home Logo</label>
+                <input type="text" id="hLogo" class="Logo">
+            </div>
+            <div class="at">
+                <label for="aLogo" class="jLab">Away Logo</label>
+                <input type="text" id="aLogo" class="Logo">
+            </div>
+        </div>
+        <div class="mBtn">
+            <button id="sBtn" class="Btnn">Start</button>
+            <button id="spBtn" class="Btnn">Stop</button>
+            <button id="rBtn" class="Btnn">Reset</button>
+            <button id="cBtn" class="Btnn">Copy</button>
+            <div class="lal">Manual</div>
+            <div class="divCAS" id="adiv">
+                <div class="circle"></div>
+                <input type="checkbox" class="cAS" id="autoSwitcher">
+            </div>
+            <div class="lal">Auto</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

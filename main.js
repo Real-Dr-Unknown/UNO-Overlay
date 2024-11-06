@@ -47,7 +47,7 @@ if (token) {
 
 } else {
 
-    fetch('/api/session', { method: 'GET' })
+    fetch('http://127.0.0.1:3000/api/session', { method: 'GET' })
         .then(response => response.json())
         .then(data => { crTkn = data.token })
 

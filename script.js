@@ -14,10 +14,13 @@ let configData = {
     "timer_text_color": "",
     "timer_background_color": "",
     "clock_start_time": "",
+    "minute": "",
+    "second": ""
 }
 
 function updateConfig(newData) {
     configData = { ...configData, ...newData };
+    console.log(configData)
 }
 
 function converttime(tiptop) {
@@ -51,6 +54,7 @@ let aT = true
 
 function minsetter() {
     min = document.getElementById('timMin').value
+    updateConfig({ minute: document.getElementById('timMin').value });
     min = Number(min)
 
     if (sec < 10 && min < 10) {
@@ -335,7 +339,51 @@ function presetter() {
     if (configData.timer_property == "reset") {
         resetbutt()
     }
+
+    if (configData.minute) {
+
+        min = configData.minute
+        min = Number(min)
+
+        if (sec < 10 && min < 10) {
+            clockk.textContent = '0' + min + ':' + '0' + sec;
+        }
+        if (min < 10 && sec > 9) {
+            clockk.textContent = '0' + min + ':' + sec;
+        }
+        if (min > 9 && sec < 10) {
+            clockk.textContent = min + ':' + '0' + sec;
+        }
+        if (sec > 9 && min > 9) {
+            clockk.textContent = min + ':' + sec;
+        }
+    }
+
+    if (configData.second) {
+
+        sec = configData.second
+        sec = Number(sec);
+
+        if (sec > 59) {
+            document.getElementById('timSec').value = null
+            sec = 0
+            min++
+        }
+        if (sec < 10 && min < 10) {
+            clockk.textContent = '0' + min + ':' + '0' + sec;
+        }
+        if (min < 10 && sec > 9) {
+            clockk.textContent = '0' + min + ':' + sec;
+        }
+        if (min > 9 && sec < 10) {
+            clockk.textContent = min + ':' + '0' + sec;
+        }
+        if (sec > 9 && min > 9) {
+            clockk.textContent = min + ':' + sec;
+        }
+    }
 }
+
 
 start.onclick = function starttimer() {
     if (!isRunning) {

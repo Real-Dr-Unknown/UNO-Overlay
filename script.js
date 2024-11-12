@@ -30,8 +30,8 @@ function converttime(tiptop) {
     let tip_sec = Math.floor(tip % 60);
 
     console.log(tip_min, tip_sec, tiptop)
-    min = tip_min
-    sec = tip_sec
+    min = min + tip_min
+    sec = sec + tip_sec
 }
 
 
@@ -324,6 +324,48 @@ function presetter() {
     if (configData.away_text_color) {
         let AAAC = document.getElementById('aaN')
         AAAC.style.color = configData.away_text_color;
+    }
+        if (configData.minute) {
+
+        min = configData.minute
+        min = Number(min)
+
+        if (sec < 10 && min < 10) {
+            clockk.textContent = '0' + min + ':' + '0' + sec;
+        }
+        if (min < 10 && sec > 9) {
+            clockk.textContent = '0' + min + ':' + sec;
+        }
+        if (min > 9 && sec < 10) {
+            clockk.textContent = min + ':' + '0' + sec;
+        }
+        if (sec > 9 && min > 9) {
+            clockk.textContent = min + ':' + sec;
+        }
+    }
+
+    if (configData.second) {
+
+        sec = configData.second
+        sec = Number(sec);
+
+        if (sec > 59) {
+            document.getElementById('timSec').value = null
+            sec = 0
+            min++
+        }
+        if (sec < 10 && min < 10) {
+            clockk.textContent = '0' + min + ':' + '0' + sec;
+        }
+        if (min < 10 && sec > 9) {
+            clockk.textContent = '0' + min + ':' + sec;
+        }
+        if (min > 9 && sec < 10) {
+            clockk.textContent = min + ':' + '0' + sec;
+        }
+        if (sec > 9 && min > 9) {
+            clockk.textContent = min + ':' + sec;
+        }
     }
 
     if (configData.timer_property == "start") {

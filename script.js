@@ -30,8 +30,8 @@ function converttime(tiptop) {
     let tip_sec = Math.floor(tip % 60);
 
     console.log(tip_min, tip_sec, tiptop)
-    min = min + tip_min
-    sec = sec + tip_sec
+    min = Number(configData.minute) + tip_min
+    sec = Number(configData.second) + tip_sec
 }
 
 
